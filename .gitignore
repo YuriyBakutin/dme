@@ -1,0 +1,8 @@
+node_modules
+dist
+out
+.DS_Store
+*.log*
+other
+**/components.d.ts
+**/auto-imports.d.ts
