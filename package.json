@@ -2,7 +2,7 @@
   "name": "dmd-editor",
   "version": "1.0.0",
   "description": "Desktop Markdown Editor",
-  "main": "electron/main/index.ts",
+  "main": "dist/electron/main/index.js",
   "type": "module",
   "author": "YuriyBakutin <yuriybakutin@gmail.com>",
   "license": "MIT",
@@ -20,6 +20,7 @@
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.2",
     "@electron-toolkit/utils": "^4.0.0",
+    "@toast-ui/editor": "^3.2.2",
     "electron": "^35.2.2",
     "open-file-explorer": "^1.0.2"
   }

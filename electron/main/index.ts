@@ -4,7 +4,7 @@ import openExplorer from 'open-file-explorer'
 import * as fs from 'fs'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 
-let mainWindow
+let mainWindow: BrowserWindow | null
 
 function createWindow(): void {
   // Create the browser window.
@@ -14,13 +14,13 @@ function createWindow(): void {
     show: false,
     autoHideMenuBar: true,
     webPreferences: {
-      preload: join(__dirname, '../preload/index.js'),
+      preload: join(__dirname, '../preload/index.mjs'),
       sandbox: false
     }
   })
 
   mainWindow.on('ready-to-show', () => {
-    mainWindow.show()
+    (mainWindow as BrowserWindow).show()
   })
 
   mainWindow.webContents.setWindowOpenHandler((details) => {
@@ -43,7 +43,7 @@ const selectFolder = (params: {
   buttonLabel: string,
 }) => {
   return dialog.showOpenDialogSync(
-    mainWindow,
+    mainWindow as BrowserWindow,
     {
       title: params.title,
       defaultPath: params.defaultPath,
