@@ -1,0 +1,26 @@
+{
+  "name": "dmd-editor",
+  "version": "1.0.0",
+  "description": "Desktop Markdown Editor",
+  "main": "electron/main/index.ts",
+  "type": "module",
+  "author": "YuriyBakutin <yuriybakutin@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron-vite preview",
+    "dev": "electron-vite dev",
+    "prebuild": "electron-vite build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "@types/open-file-explorer": "^1.0.2",
+    "electron-vite": "^3.1.0"
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "^3.0.2",
+    "@electron-toolkit/utils": "^4.0.0",
+    "electron": "^35.2.2",
+    "open-file-explorer": "^1.0.2"
+  }
+}
